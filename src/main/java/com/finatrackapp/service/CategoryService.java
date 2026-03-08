@@ -1,5 +1,9 @@
 package com.finatrackapp.service;
 
+import java.util.List;
+
+import org.springframework.stereotype.Service;
+
 import com.finatrackapp.dto.request.CategoryRequest;
 import com.finatrackapp.dto.response.CategoryResponse;
 import com.finatrackapp.exception.DuplicateResourceException;
@@ -8,9 +12,6 @@ import com.finatrackapp.exception.ResourceNotFoundException;
 import com.finatrackapp.model.Category;
 import com.finatrackapp.model.User;
 import com.finatrackapp.repository.CategoryRepository;
-import org.springframework.stereotype.Service;
-
-import java.util.List;
 
 @Service
 @SuppressWarnings("null")

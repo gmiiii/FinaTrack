@@ -1,24 +1,24 @@
 package com.finatrackapp.service;
 
-import com.finatrackapp.model.Category;
-import com.finatrackapp.model.Transaction;
-import com.finatrackapp.model.TransactionType;
-import com.finatrackapp.model.User;
-import com.finatrackapp.repository.TransactionRepository;
+import java.math.BigDecimal;
+import java.time.LocalDate;
+import java.util.List;
+
+import static org.assertj.core.api.Assertions.assertThat;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
+import static org.mockito.Mockito.when;
 import org.mockito.junit.jupiter.MockitoExtension;
 
-import java.math.BigDecimal;
-import java.time.LocalDate;
-import java.util.List;
-
-import static org.assertj.core.api.Assertions.assertThat;
-import static org.mockito.Mockito.when;
+import com.finatrackapp.model.Category;
+import com.finatrackapp.model.Transaction;
+import com.finatrackapp.model.TransactionType;
+import com.finatrackapp.model.User;
+import com.finatrackapp.repository.TransactionRepository;
 
 @ExtendWith(MockitoExtension.class)
 @SuppressWarnings({"unused", "null"})
