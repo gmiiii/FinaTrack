@@ -1,5 +1,16 @@
 package com.finatrackapp.service;
 
+import java.math.BigDecimal;
+import java.time.LocalDate;
+import java.util.List;
+
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Pageable;
+import org.springframework.data.domain.Sort;
+import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
+
 import com.finatrackapp.dto.request.TransactionRequest;
 import com.finatrackapp.dto.response.CategorySummaryResponse;
 import com.finatrackapp.dto.response.DashboardResponse;
@@ -13,18 +24,9 @@ import com.finatrackapp.model.TransactionType;
 import com.finatrackapp.model.User;
 import com.finatrackapp.repository.CategoryRepository;
 import com.finatrackapp.repository.TransactionRepository;
-import org.springframework.data.domain.Page;
-import org.springframework.data.domain.PageRequest;
-import org.springframework.data.domain.Pageable;
-import org.springframework.data.domain.Sort;
-import org.springframework.stereotype.Service;
-import org.springframework.transaction.annotation.Transactional;
-
-import java.math.BigDecimal;
-import java.time.LocalDate;
-import java.util.List;
 
 @Service
+@SuppressWarnings("null")
 public class TransactionService {
 
     private final TransactionRepository transactionRepository;
@@ -62,6 +64,7 @@ public class TransactionService {
         return toResponse(transaction);
     }
 
+    @SuppressWarnings("java:S107")
     public PagedResponse<TransactionResponse> getTransactions(
             String email, int page, int size,
             String sortBy, String sortDir,

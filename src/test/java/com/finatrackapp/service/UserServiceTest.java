@@ -1,28 +1,29 @@
 package com.finatrackapp.service;
 
-import com.finatrackapp.dto.request.UpdateProfileRequest;
-import com.finatrackapp.dto.response.UserResponse;
-import com.finatrackapp.exception.ResourceNotFoundException;
-import com.finatrackapp.model.User;
-import com.finatrackapp.repository.UserRepository;
-import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.DisplayName;
-import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.extension.ExtendWith;
-import org.mockito.InjectMocks;
-import org.mockito.Mock;
-import org.mockito.junit.jupiter.MockitoExtension;
-
 import java.time.LocalDateTime;
 import java.util.Optional;
 
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.assertj.core.api.Assertions.assertThatThrownBy;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.extension.ExtendWith;
 import static org.mockito.ArgumentMatchers.any;
+import org.mockito.InjectMocks;
+import org.mockito.Mock;
 import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
+import org.mockito.junit.jupiter.MockitoExtension;
+
+import com.finatrackapp.dto.request.UpdateProfileRequest;
+import com.finatrackapp.dto.response.UserResponse;
+import com.finatrackapp.exception.ResourceNotFoundException;
+import com.finatrackapp.model.User;
+import com.finatrackapp.repository.UserRepository;
 
 @ExtendWith(MockitoExtension.class)
+@SuppressWarnings("null")
 class UserServiceTest {
 
     @Mock
@@ -33,6 +34,7 @@ class UserServiceTest {
 
     private User testUser;
 
+    @SuppressWarnings("unused")
     @BeforeEach
     void setUp() {
         testUser = new User();

@@ -1,5 +1,12 @@
 package com.finatrackapp.service;
 
+import java.math.BigDecimal;
+import java.math.RoundingMode;
+import java.util.List;
+
+import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
+
 import com.finatrackapp.dto.request.SavingsGoalContributionRequest;
 import com.finatrackapp.dto.request.SavingsGoalRequest;
 import com.finatrackapp.dto.response.SavingsGoalResponse;
@@ -11,14 +18,9 @@ import com.finatrackapp.model.User;
 import com.finatrackapp.model.UserBadge;
 import com.finatrackapp.repository.SavingsGoalRepository;
 import com.finatrackapp.repository.UserBadgeRepository;
-import org.springframework.stereotype.Service;
-import org.springframework.transaction.annotation.Transactional;
-
-import java.math.BigDecimal;
-import java.math.RoundingMode;
-import java.util.List;
 
 @Service
+@SuppressWarnings("null")
 public class SavingsGoalService {
 
     private static final int PERCENTAGE_SCALE = 2;
