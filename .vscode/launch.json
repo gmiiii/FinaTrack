@@ -1,0 +1,12 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Run FinaTrack",
+            "request": "launch",
+            "mainClass": "com.finatrackapp.FinaTrackApplication",
+            "projectName": "finatrack"
+        }
+    ]
+}
