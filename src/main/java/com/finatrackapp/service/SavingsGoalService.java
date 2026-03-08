@@ -19,6 +19,7 @@ import java.math.RoundingMode;
 import java.util.List;
 
 @Service
+@SuppressWarnings("null")
 public class SavingsGoalService {
 
     private static final int PERCENTAGE_SCALE = 2;

@@ -23,6 +23,7 @@ import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
 
 @ExtendWith(MockitoExtension.class)
+@SuppressWarnings("null")
 class UserServiceTest {
 
     @Mock
@@ -33,6 +34,7 @@ class UserServiceTest {
 
     private User testUser;
 
+    @SuppressWarnings("unused")
     @BeforeEach
     void setUp() {
         testUser = new User();

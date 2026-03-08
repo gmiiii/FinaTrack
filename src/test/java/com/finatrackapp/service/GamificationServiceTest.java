@@ -33,6 +33,7 @@ import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
 
 @ExtendWith(MockitoExtension.class)
+@SuppressWarnings("null")
 class GamificationServiceTest {
 
     @Mock
@@ -52,6 +53,7 @@ class GamificationServiceTest {
 
     private User testUser;
 
+    @SuppressWarnings("unused")
     @BeforeEach
     void setUp() {
         testUser = new User();

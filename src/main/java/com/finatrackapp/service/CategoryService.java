@@ -13,6 +13,7 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 
 @Service
+@SuppressWarnings("null")
 public class CategoryService {
 
     private static final String CATEGORY_NOT_FOUND = "Kategori tidak ditemukan";

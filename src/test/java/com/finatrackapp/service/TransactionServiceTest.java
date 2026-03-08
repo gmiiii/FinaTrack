@@ -36,6 +36,7 @@ import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
 
 @ExtendWith(MockitoExtension.class)
+@SuppressWarnings("null")
 class TransactionServiceTest {
 
     @Mock
@@ -58,6 +59,7 @@ class TransactionServiceTest {
     private Transaction testTransaction;
     private TransactionRequest transactionRequest;
 
+    @SuppressWarnings("unused")
     @BeforeEach
     void setUp() {
         testUser = new User();

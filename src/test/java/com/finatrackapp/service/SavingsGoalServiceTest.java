@@ -27,12 +27,12 @@ import java.util.Optional;
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.assertj.core.api.Assertions.assertThatThrownBy;
 import static org.mockito.ArgumentMatchers.any;
-import static org.mockito.ArgumentMatchers.eq;
 import static org.mockito.Mockito.never;
 import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
 
 @ExtendWith(MockitoExtension.class)
+@SuppressWarnings("null")
 class SavingsGoalServiceTest {
 
     @Mock
@@ -51,6 +51,7 @@ class SavingsGoalServiceTest {
     private SavingsGoal testGoal;
     private SavingsGoalRequest goalRequest;
 
+    @SuppressWarnings("unused")
     @BeforeEach
     void setUp() {
         testUser = new User();
@@ -222,7 +223,7 @@ class SavingsGoalServiceTest {
         when(savingsGoalRepository.save(any(SavingsGoal.class)))
                 .thenAnswer(i -> i.getArgument(0));
         when(userBadgeRepository.existsByUserIdAndBadgeType(
-                eq(1L), eq(BadgeType.SAVINGS_ACHIEVER))).thenReturn(false);
+                1L, BadgeType.SAVINGS_ACHIEVER)).thenReturn(false);
 
         SavingsGoalResponse result =
                 savingsGoalService.contribute(1L, contribution, "test@example.com");

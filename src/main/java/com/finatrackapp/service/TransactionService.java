@@ -25,6 +25,7 @@ import java.time.LocalDate;
 import java.util.List;
 
 @Service
+@SuppressWarnings("null")
 public class TransactionService {
 
     private final TransactionRepository transactionRepository;
@@ -62,6 +63,7 @@ public class TransactionService {
         return toResponse(transaction);
     }
 
+    @SuppressWarnings("java:S107")
     public PagedResponse<TransactionResponse> getTransactions(
             String email, int page, int size,
             String sortBy, String sortDir,

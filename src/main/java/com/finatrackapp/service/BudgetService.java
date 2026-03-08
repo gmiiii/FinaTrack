@@ -20,6 +20,7 @@ import java.time.LocalDate;
 import java.util.List;
 
 @Service
+@SuppressWarnings("null")
 public class BudgetService {
 
     private static final int PERCENTAGE_SCALE = 2;

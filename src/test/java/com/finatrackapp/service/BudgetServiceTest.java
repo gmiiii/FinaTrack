@@ -32,6 +32,7 @@ import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
 
 @ExtendWith(MockitoExtension.class)
+@SuppressWarnings("null")
 class BudgetServiceTest {
 
     @Mock
@@ -54,6 +55,7 @@ class BudgetServiceTest {
     private Budget testBudget;
     private BudgetRequest budgetRequest;
 
+    @SuppressWarnings("unused")
     @BeforeEach
     void setUp() {
         testUser = new User();

@@ -28,6 +28,7 @@ import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
 
 @ExtendWith(MockitoExtension.class)
+@SuppressWarnings("null")
 class CategoryServiceTest {
 
     @Mock
@@ -44,6 +45,7 @@ class CategoryServiceTest {
     private Category customCategory;
     private CategoryRequest categoryRequest;
 
+    @SuppressWarnings("unused")
     @BeforeEach
     void setUp() {
         testUser = new User();

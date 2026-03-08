@@ -21,6 +21,7 @@ import static org.assertj.core.api.Assertions.assertThat;
 import static org.mockito.Mockito.when;
 
 @ExtendWith(MockitoExtension.class)
+@SuppressWarnings({"unused", "null"})
 class ExportServiceTest {
 
     @Mock
@@ -82,11 +83,13 @@ class ExportServiceTest {
         String[] lines = csv.trim().split("\\r?\\n");
         assertThat(lines).hasSize(3);
         assertThat(lines[0]).isEqualTo("Tanggal,Tipe,Kategori,Nominal,Deskripsi");
-        assertThat(lines[1]).contains("2026-03-01");
-        assertThat(lines[1]).contains("EXPENSE");
-        assertThat(lines[1]).contains("50000");
-        assertThat(lines[2]).contains("INCOME");
-        assertThat(lines[2]).contains("5000000");
+        assertThat(lines[1])
+                .contains("2026-03-01")
+                .contains("EXPENSE")
+                .contains("50000");
+        assertThat(lines[2])
+                .contains("INCOME")
+                .contains("5000000");
     }
 
     @Test
@@ -107,8 +110,9 @@ class ExportServiceTest {
 
         String csv = exportService.exportTransactionsCsv("test@example.com");
 
-        assertThat(csv).contains("\"Makan, Minum\"");
-        assertThat(csv).contains("\"Nasi \"\"goreng\"\" special\"");
+        assertThat(csv)
+                .contains("\"Makan, Minum\"")
+                .contains("\"Nasi \"\"goreng\"\" special\"");
     }
 
     @Test
